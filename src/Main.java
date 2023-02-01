@@ -4,12 +4,13 @@ public class Main {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Enter Temp");
         double temp = collectInput();
 
-        double fahrenheitToCelsius = convertToCelsius(temp);
-
-        display(fahrenheitToCelsius);
+        while (temp > -460) {
+            double fahrenheitToCelsius = convertToCelsius(temp);
+            display(fahrenheitToCelsius);
+            temp = collectInput();
+        }
 
     }
 
